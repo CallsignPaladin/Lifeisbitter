@@ -1,0 +1,46 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "lifeisbitter:steel_sheet"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "item": "lifeisbitter:diamondsteel_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "lifeisbitter:steel_sheet"
+        },
+        {
+          "item": "lifeisbitter:diamond_dust"
+        }
+      ],
+      "results": [
+        {
+          "item": "lifeisbitter:steel_sheet"
+        }
+      ]
+    },
+	{
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "lifeisbitter:steel_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "lifeisbitter:steel_sheet"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "lifeisbitter:steel_sheet"
+  }
+}

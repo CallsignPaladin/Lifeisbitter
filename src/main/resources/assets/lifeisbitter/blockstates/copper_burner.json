@@ -1,0 +1,25 @@
+{
+  "multipart": [{
+      "apply": {
+        "model": "lifeisbitter:block/copper_burner"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"blaze": "kindled"},
+          {"blaze": "seething"},
+          {"blaze": "fading"}
+        ]
+      },
+      "apply": {
+        "model": "lifeisbitter:block/copper_burner_burning",
+        "textures": {
+          "0": "lifeisbitter:block/blaze_heater_brazier",
+          "1": "lifeisbitter:block/campfire_fire",
+          "particle": "lifeisbitter:block/dark_metal_block"
+        }
+      }
+    }
+  ]
+}

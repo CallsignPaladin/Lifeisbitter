@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [ 
+    {
+      "conditions": [
+        {
+           "type": "forge:not",
+			"value": {
+				"type": "forge:mod_loaded",
+				"modid": "estrogen"
+			}
+        }
+      ],
+      "recipe":
+      {
+        "type": "create:mixing",
+        "heatRequirement": "none",
+        "ingredients": [
+          {
+			"amount": 100,
+			"fluid": "lifeisbitter:urine"
+          },
+          {
+            "item": "create:filter"
+          }
+        ],
+        "results": [
+          {
+            "count": 1,
+            "item": "lifeisbitter:used_filter"
+          },
+		  {
+            "count": 1,
+            "item": "lifeisbitter:nitre"
+          }
+        ]
+      }
+    }
+  ]
+}

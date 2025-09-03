@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "s s",
+    "   "
+  ],
+  "key": {
+    "s": {
+      "item": "lifeisbitter:steel_sheet"
+    }
+  },
+  "result": {
+    "item": "lifeisbitter:steel_helmet",
+    "count": 1
+  }
+}

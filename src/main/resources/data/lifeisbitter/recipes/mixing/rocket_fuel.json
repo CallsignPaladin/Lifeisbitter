@@ -1,0 +1,45 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "lifeisbitter:sulfur_dust"
+    },
+	{
+      "item": "lifeisbitter:sulfur_dust"
+    },
+	{
+      "item": "lifeisbitter:sulfur_dust"
+    },
+	{
+      "item": "create:zinc_ingot"
+    },
+	{
+      "item": "create:zinc_ingot"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    },
+	{
+      "item": "lifeisbitter:nitre"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "fluid": "lifeisbitter:rocket_fuel"
+    }
+  ]
+}

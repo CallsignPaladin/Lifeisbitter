@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    " s ",
+    " h "
+  ],
+  "key": {
+    "s": {
+      "item": "lifeisbitter:steel_ingot"
+    },
+	"h": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "lifeisbitter:steel_sword",
+    "count": 1
+  }
+}

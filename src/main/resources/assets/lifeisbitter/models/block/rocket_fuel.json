@@ -1,0 +1,8 @@
+{
+    "textures": {
+        "particle": "lifeisbitter:block/rocket_fuel_still",
+		"still": "lifeisbitter:block/rocket_fuel_still",
+		"flow": "lifeisbitter:block/rocket_fuel_flow"
+    }
+}
+

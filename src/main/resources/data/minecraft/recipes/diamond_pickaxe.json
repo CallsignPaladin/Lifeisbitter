@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sds",
+    " h ",
+    " h "
+  ],
+  "key": {
+    "s": {
+      "item": "lifeisbitter:polished_diamond"
+    },
+	"d": {
+      "item": "minecraft:diamond"
+    },
+	"h": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_pickaxe",
+    "count": 1
+  }
+}

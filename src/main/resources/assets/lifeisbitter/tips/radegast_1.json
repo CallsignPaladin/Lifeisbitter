@@ -1,0 +1,11 @@
+{
+  "title": {
+    "translate": "lifeisbitter.tip.title",
+	"underlined": true,
+    "color": "#BF8E56"
+  },
+  "tip": {
+    "translate": "lifeisbitter.tip.radegast_1",
+    "color": "#8900E5"
+  }
+}

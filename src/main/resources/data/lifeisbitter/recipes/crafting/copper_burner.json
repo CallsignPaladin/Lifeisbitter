@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:netherrack"
+    },
+    "I": {
+      "tag": "forge:plates/copper"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IAI",
+    " I "
+  ],
+  "result": {
+    "item": "lifeisbitter:copper_burner"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    " h ",
+    " h "
+  ],
+  "key": {
+	"s": {
+      "item": "lifeisbitter:polished_diamond"
+    },
+	"h": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_shovel",
+    "count": 1
+  }
+}

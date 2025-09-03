@@ -1,0 +1,11 @@
+{
+	"parent": "block/block",
+	"loader": "forge:obj",
+	"flip_v": true,
+	"model": "lifeisbitter:models/block/campfire.obj",
+	"textures": {
+		"0": "lifeisbitter:block/blaze_heater_brazier",
+		"1": "block/campfire_fire",
+		"particle": "lifeisbitter:block/dark_metal_block"
+	}
+}
