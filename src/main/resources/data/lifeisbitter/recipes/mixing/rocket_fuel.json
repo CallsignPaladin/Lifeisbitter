@@ -3,37 +3,37 @@
   "heatRequirement": "superheated",
   "ingredients": [
     {
-      "item": "lifeisbitter:sulfur_dust"
+      "tag": "forge:sulfur_dust"
     },
 	{
-      "item": "lifeisbitter:sulfur_dust"
+      "tag": "forge:sulfur_dust"
     },
 	{
-      "item": "lifeisbitter:sulfur_dust"
+      "tag": "forge:sulfur_dust"
     },
 	{
-      "item": "create:zinc_ingot"
+      "tag": "forge:ingots/zinc"
     },
 	{
-      "item": "create:zinc_ingot"
+      "tag": "forge:ingots/zinc"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     },
 	{
-      "item": "lifeisbitter:nitre"
+      "tag": "forge:nitre"
     }
   ],
   "results": [

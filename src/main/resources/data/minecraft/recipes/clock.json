@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "create:golden_sheet"
+    },
+    "X": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "item": "minecraft:clock"
+  },
+  "show_notification": true
+}

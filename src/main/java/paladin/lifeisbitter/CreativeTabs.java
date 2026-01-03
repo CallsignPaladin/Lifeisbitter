@@ -47,11 +47,14 @@ public class CreativeTabs {
                         output.accept(DIAMONDSTEEL_SHEET.get());
                         output.accept(SULFUR_DUST.get());
                         output.accept(NITRE.get());
+                        output.accept(LIMESTONE_DUST.get());
                         output.accept(SOLID_FUEL.get());
                         output.accept(URINE_BUCKET.get());
                         output.accept(ROCKET_FUEL_BUCKET.get());
                         output.accept(COPPER_BURNER_ITEM.get());
+                        output.accept(TALL_BLAST_FURNACE_ITEM.get());
                         output.accept(USED_FILTER.get());
+                        output.accept(COKE.get());
                     })
                     .build()
             );
@@ -77,6 +80,7 @@ public class CreativeTabs {
             PutAfter(NITRE, SULFUR_DUST);
             PutAfter(DIAMOND_DUST, NITRE);
             PutAfter(SOLID_FUEL, DIAMOND_DUST);
+            PutAfter(COKE, CHARCOAL);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             PutAfter(STEEL_SHOVEL, Items.IRON_HOE);

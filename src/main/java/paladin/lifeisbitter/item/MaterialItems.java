@@ -1,5 +1,7 @@
 package paladin.lifeisbitter.item;
 
+import com.simibubi.create.compat.jei.category.SequencedAssemblyCategory;
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -22,19 +24,23 @@ public class MaterialItems {
     public static final RegistryObject<Item> STEEL_SHEET = ITEMS.register("steel_sheet",
             () -> new Item(new Item.Properties()));
 
-
-
     public static final RegistryObject<Item> STEEL_BLOCK_ITEM = ITEMS.register("steel_block",
             () -> new BlockItem(ModBlocks.STEEL_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> COPPER_BURNER_ITEM = ITEMS.register("copper_burner",
             () -> new BlockItem(ModBlocks.COPPER_BURNER.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> TALL_BLAST_FURNACE_ITEM = ITEMS.register("tall_blast_furnace",
+            () -> new BlockItem(ModBlocks.TALL_BLAST_FURNACE.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> POLISHED_DIAMOND = ITEMS.register("polished_diamond",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> DIAMOND_DUST = ITEMS.register("diamond_dust",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<SequencedAssemblyItem> INCOMPLETE_DIAMONDSTEEL_SHEET = ITEMS.register("incomplete_diamondsteel_sheet",
+            () -> new SequencedAssemblyItem(new Item.Properties()));
 
     public static final RegistryObject<Item> DIAMONDSTEEL_SHEET = ITEMS.register("diamondsteel_sheet",
             () -> new Item(new Item.Properties()));
@@ -46,5 +52,11 @@ public class MaterialItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SOLID_FUEL = ITEMS.register("solid_fuel",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COKE = ITEMS.register("coke",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LIMESTONE_DUST = ITEMS.register("limestone_dust",
             () -> new Item(new Item.Properties()));
 }
