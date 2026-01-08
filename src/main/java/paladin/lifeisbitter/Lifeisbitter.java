@@ -46,7 +46,6 @@ public class Lifeisbitter {
 
     public Lifeisbitter(FMLJavaModLoadingContext fmlJavaModLoadingContext) {
         IEventBus modEventBus = fmlJavaModLoadingContext.getModEventBus();//FMLJavaModLoadingContext.get().getModEventBus();
-
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

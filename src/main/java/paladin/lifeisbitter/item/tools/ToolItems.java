@@ -1,11 +1,14 @@
 package paladin.lifeisbitter.item.tools;
 
+import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import paladin.lifeisbitter.Lifeisbitter;
+import paladin.lifeisbitter.blocks.processing.TallBlastFurnaceBlock;
 import paladin.lifeisbitter.item.fluid.BaseFluidType;
 import paladin.lifeisbitter.item.fluid.ModFluids;
 
@@ -41,8 +44,18 @@ public class ToolItems {
             () -> new Item(new Item.Properties()));
 
     // FLUID STORAGE
+    public static ItemEntry<BucketItem> URINE_BUCKET = Lifeisbitter.REGISTRATE.item("urine_bucket",
+            properties -> new BucketItem(
+                    ModFluids.SOURCE_URINE,
+                    properties.stacksTo(1)
+                            .craftRemainder(Items.BUCKET)
+            )).register();
+
+    /*
     public static final RegistryObject<Item> URINE_BUCKET = ITEMS.register("urine_bucket",
             () -> new BucketItem(ModFluids.SOURCE_URINE, (new Item.Properties()).stacksTo(1)));
+
+     */
     public static final RegistryObject<Item> ROCKET_FUEL_BUCKET = ITEMS.register("rocket_fuel_bucket",
             () -> new BucketItem(ModFluids.SOURCE_ROCKET_FUEL, (new Item.Properties()).stacksTo(1)));
 

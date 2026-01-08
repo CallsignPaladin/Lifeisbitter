@@ -11,7 +11,7 @@ import paladin.lifeisbitter.Lifeisbitter;
 
 public class TallBlastFurnaceScreen extends AbstractContainerScreen<TallBlastFurnaceMenu> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(Lifeisbitter.MODID, "textures/gui/tall_blast_furnace_gui.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, "textures/gui/tall_blast_furnace_gui.png");
 
     public TallBlastFurnaceScreen(TallBlastFurnaceMenu p_97741_, Inventory p_97742_, Component p_97743_) {
         super(p_97741_, p_97742_, p_97743_);

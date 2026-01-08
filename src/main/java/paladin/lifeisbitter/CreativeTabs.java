@@ -49,7 +49,7 @@ public class CreativeTabs {
                         output.accept(NITRE.get());
                         output.accept(LIMESTONE_DUST.get());
                         output.accept(SOLID_FUEL.get());
-                        output.accept(URINE_BUCKET.get());
+                        //output.accept(URINE_BUCKET);
                         output.accept(ROCKET_FUEL_BUCKET.get());
                         output.accept(COPPER_BURNER_ITEM.get());
                         output.accept(TALL_BLAST_FURNACE_ITEM.get());
@@ -87,8 +87,8 @@ public class CreativeTabs {
             PutAfter(STEEL_PICKAXE, STEEL_SHOVEL);
             PutAfter(STEEL_AXE, STEEL_PICKAXE);
             PutAfter(STEEL_HOE, STEEL_AXE);
-            PutAfter(URINE_BUCKET, MILK_BUCKET);
-            PutAfter(ROCKET_FUEL_BUCKET, URINE_BUCKET);
+            //PutAfter(URINE_BUCKET.asItem(), MILK_BUCKET);
+            //PutAfter(ROCKET_FUEL_BUCKET, URINE_BUCKET);
         }
     }
 

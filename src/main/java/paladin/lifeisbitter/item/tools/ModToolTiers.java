@@ -16,10 +16,10 @@ import java.util.List;
 public class ModToolTiers {
     public static final Tier STEEL = TierSortingRegistry.registerTier(
             new ForgeTier(2, 800, 7,-1.0f,17, Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(MaterialItems.STEEL_INGOT.get())),
-            new ResourceLocation(Lifeisbitter.MODID, "steel"), List.of(Tiers.IRON), List.of()
+            ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, "steel"), List.of(Tiers.IRON), List.of()
     );
     public static final Tier NEWIRON = TierSortingRegistry.registerTier(
             new ForgeTier(2, 180, 5,-1.0f,12, Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(Lifeisbitter.MODID, "newiron"), List.of(Tiers.IRON), List.of()
+            ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, "newiron"), List.of(Tiers.IRON), List.of()
     );
 }
