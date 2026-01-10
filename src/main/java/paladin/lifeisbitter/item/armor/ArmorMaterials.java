@@ -7,13 +7,13 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import paladin.lifeisbitter.Lifeisbitter;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 
 import java.util.function.Supplier;
 
 public enum ArmorMaterials implements ArmorMaterial {
     STEEL("steel", 19, new int[]{ 2, 6, 5, 2}, 20, SoundEvents.ARMOR_EQUIP_IRON, 1f, 0f,
-            () -> Ingredient.of(MaterialItems.STEEL_INGOT.get())),
+            () -> Ingredient.of(AllBasicItems.STEEL_INGOT.get())),
     IRON("iron", 12, new int[]{ 2, 4, 3, 1}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0f, 0f,
             () -> Ingredient.of(Items.IRON_INGOT));
 

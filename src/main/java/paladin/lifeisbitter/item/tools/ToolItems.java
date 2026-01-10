@@ -39,24 +39,4 @@ public class ToolItems {
             () -> new ShovelItem(ModToolTiers.NEWIRON, 4.5f, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> IRON_HOE = VANILLA_ITEMS.register("iron_hoe",
             () -> new HoeItem(ModToolTiers.NEWIRON, 4, -1.0f, new Item.Properties()));
-
-    public static final RegistryObject<Item> USED_FILTER = ITEMS.register("used_filter",
-            () -> new Item(new Item.Properties()));
-
-    // FLUID STORAGE
-    public static ItemEntry<BucketItem> URINE_BUCKET = Lifeisbitter.REGISTRATE.item("urine_bucket",
-            properties -> new BucketItem(
-                    ModFluids.SOURCE_URINE,
-                    properties.stacksTo(1)
-                            .craftRemainder(Items.BUCKET)
-            )).register();
-
-    /*
-    public static final RegistryObject<Item> URINE_BUCKET = ITEMS.register("urine_bucket",
-            () -> new BucketItem(ModFluids.SOURCE_URINE, (new Item.Properties()).stacksTo(1)));
-
-     */
-    public static final RegistryObject<Item> ROCKET_FUEL_BUCKET = ITEMS.register("rocket_fuel_bucket",
-            () -> new BucketItem(ModFluids.SOURCE_ROCKET_FUEL, (new Item.Properties()).stacksTo(1)));
-
 }

@@ -1,33 +1,25 @@
 package paladin.lifeisbitter.blocks.burners;
 
-import com.simibubi.create.AllTags;
-import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlockEntity;
-import com.simibubi.create.content.processing.burner.BlazeBurnerBlockItem;
-import com.simibubi.create.foundation.block.IBE;
 import net.createmod.catnip.math.VecHelper;
-import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeHooks;
 import paladin.lifeisbitter.blocks.ModBlocks;
+import paladin.lifeisbitter.item.AllBasicItems;
 
 public class CopperBurnerBlockEntity extends BlazeBurnerBlockEntity {
     public CopperBurnerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlocks.COPPER_BURNER_ENTITY.get(), pos, state);
     }
+
+    public static int cokeBurnTime = 1200;
 
     @Override
     protected boolean tryUpdateFuel(ItemStack itemStack, boolean forceOverflow, boolean simulate) {
@@ -37,6 +29,8 @@ public class CopperBurnerBlockEntity extends BlazeBurnerBlockEntity {
         FuelType newFuel = FuelType.NONE;
         int newBurnTime;
 
+        //Old system that used all types of fuel. New system uses only coke
+        /*
         if (AllTags.AllItemTags.BLAZE_BURNER_FUEL_SPECIAL.matches(itemStack)) {
             return false;
         } else {
@@ -47,9 +41,14 @@ public class CopperBurnerBlockEntity extends BlazeBurnerBlockEntity {
                 newBurnTime = 800; // half of blaze burner value
                 newFuel = FuelType.NORMAL;
             }
-        }
-        if (newFuel == FuelType.NONE)
+        }*/
+        if (itemStack.getItem() == AllBasicItems.COKE.get()){
+            newBurnTime = cokeBurnTime;
+            newFuel = FuelType.NORMAL;
+        }else{
             return false;
+        }
+
         if (newFuel.ordinal() < activeFuel.ordinal())
             return false;
 

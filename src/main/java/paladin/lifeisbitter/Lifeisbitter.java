@@ -13,7 +13,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.IExtensionPoint;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -22,7 +21,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import paladin.lifeisbitter.blocks.ModBlocks;
 import paladin.lifeisbitter.crafting.ModRecipes;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.armor.ArmorItems;
 import paladin.lifeisbitter.item.fluid.ModFluidTypes;
 import paladin.lifeisbitter.item.fluid.ModFluids;
@@ -51,7 +50,7 @@ public class Lifeisbitter {
 
         ArmorItems.ITEMS.register(modEventBus);
         ArmorItems.VANILLA_ITEMS.register(modEventBus);
-        MaterialItems.ITEMS.register(modEventBus);
+        AllBasicItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlocks.BLOCK_ENTITIES.register(modEventBus);
         ToolItems.ITEMS.register(modEventBus);

@@ -1,21 +1,17 @@
 package paladin.lifeisbitter.item;
 
-import com.simibubi.create.compat.jei.category.SequencedAssemblyCategory;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import paladin.lifeisbitter.CreativeTabs;
 import paladin.lifeisbitter.Lifeisbitter;
 import paladin.lifeisbitter.blocks.ModBlocks;
 import paladin.lifeisbitter.item.fluid.ModFluids;
 
-public class MaterialItems {
+public class AllBasicItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lifeisbitter.MODID);
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
@@ -59,4 +55,27 @@ public class MaterialItems {
 
     public static final RegistryObject<Item> LIMESTONE_DUST = ITEMS.register("limestone_dust",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> USED_FILTER = ITEMS.register("used_filter",
+            () -> new Item(new Item.Properties()));
+
+
+    // FLUID STORAGE
+    public static ItemEntry<BucketItem> URINE_BUCKET = Lifeisbitter.REGISTRATE.item("urine_bucket",
+                    properties -> new BucketItem(
+                            ModFluids.SOURCE_URINE,
+                            properties.stacksTo(1)
+                                    .craftRemainder(Items.BUCKET)
+                    ))
+            .tab(CreativeTabs.MAIN_TAB.getKey())
+            .register();
+
+    /*
+    public static final RegistryObject<Item> URINE_BUCKET = ITEMS.register("urine_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_URINE, (new Item.Properties()).stacksTo(1)));
+
+     */
+    public static final RegistryObject<Item> ROCKET_FUEL_BUCKET = ITEMS.register("rocket_fuel_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_ROCKET_FUEL, (new Item.Properties()).stacksTo(1)));
+
 }

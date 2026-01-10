@@ -23,7 +23,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import paladin.lifeisbitter.blocks.ModBlocks;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.screens.TallBlastFurnaceMenu;
 
 public class TallBlastFurnaceBlockEntity extends BlockEntity implements MenuProvider {
@@ -164,14 +164,14 @@ public class TallBlastFurnaceBlockEntity extends BlockEntity implements MenuProv
     }
 
     private boolean CanProcess(){
-        boolean hasCraftingItem = this.itemStackHandler.getStackInSlot(0).getItem() == MaterialItems.STEEL_INGOT.get();
-        ItemStack result = new ItemStack(MaterialItems.STEEL_SHEET.get());
+        boolean hasCraftingItem = this.itemStackHandler.getStackInSlot(0).getItem() == AllBasicItems.STEEL_INGOT.get();
+        ItemStack result = new ItemStack(AllBasicItems.STEEL_SHEET.get());
 
-        return hasCraftingItem && result.getCount() < 64 && (result.getItem() == MaterialItems.STEEL_SHEET.get() || this.itemStackHandler.getStackInSlot(OUTPUT_SLOT).isEmpty());
+        return hasCraftingItem && result.getCount() < 64 && (result.getItem() == AllBasicItems.STEEL_SHEET.get() || this.itemStackHandler.getStackInSlot(OUTPUT_SLOT).isEmpty());
     }
 
      private void Process(){
-        ItemStack result = new ItemStack(MaterialItems.STEEL_SHEET.get(), 1);
+        ItemStack result = new ItemStack(AllBasicItems.STEEL_SHEET.get(), 1);
         this.itemStackHandler.extractItem(0,1,false);
 
         this.itemStackHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),

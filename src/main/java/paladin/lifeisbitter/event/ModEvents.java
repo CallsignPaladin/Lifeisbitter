@@ -19,8 +19,8 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import paladin.lifeisbitter.Lifeisbitter;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.fluid.ModFluids;
-import paladin.lifeisbitter.item.tools.ToolItems;
 
 public class ModEvents {
     @Mod.EventBusSubscriber(modid = Lifeisbitter.MODID)
@@ -38,7 +38,7 @@ public class ModEvents {
 
             if (heldItem.getItem() == Items.BUCKET) {
 
-                ItemStack urineBucket = new ItemStack(ToolItems.URINE_BUCKET.get());
+                ItemStack urineBucket = new ItemStack(AllBasicItems.URINE_BUCKET.get());
                 heldItem.shrink(1);
 
                 if (!player.getInventory().add(urineBucket)) {

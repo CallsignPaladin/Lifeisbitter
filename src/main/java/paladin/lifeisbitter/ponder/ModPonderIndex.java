@@ -1,15 +1,10 @@
 package paladin.lifeisbitter.ponder;
 
-import com.simibubi.create.AllItems;
-import com.simibubi.create.infrastructure.ponder.AllCreatePonderTags;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
-import paladin.lifeisbitter.blocks.ModBlocks;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.tools.ToolItems;
 import paladin.lifeisbitter.ponder.scenes.UrineScene;
 
@@ -22,7 +17,7 @@ public class ModPonderIndex {
                 .addStoryBoard("urine", UrineScene::scene);
 
          */
-        HELPER.forComponents((ItemProviderEntry<?>) ToolItems.URINE_BUCKET)
+        HELPER.forComponents((ItemProviderEntry<?>) AllBasicItems.URINE_BUCKET)
                 .addStoryBoard("urine", UrineScene::scene);
     }
 }

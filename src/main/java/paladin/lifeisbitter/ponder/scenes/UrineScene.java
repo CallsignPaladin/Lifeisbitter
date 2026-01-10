@@ -12,7 +12,7 @@ import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.Vec3;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.tools.ToolItems;
 
 public class UrineScene {
@@ -56,7 +56,7 @@ public class UrineScene {
 
         Class<DeployerBlockEntity> teType = DeployerBlockEntity.class;
         ItemStack emptyBucket = new ItemStack(Items.BUCKET);
-        ItemStack urineBucket = new ItemStack(ToolItems.URINE_BUCKET.get());
+        ItemStack urineBucket = new ItemStack(AllBasicItems.URINE_BUCKET.get());
         Selection deployerSelection = util.select().position(deployerPos);
 
         scene.world().modifyBlockEntityNBT(deployerSelection, teType, (nbt) -> nbt.put("HeldItem", emptyBucket.serializeNBT()));

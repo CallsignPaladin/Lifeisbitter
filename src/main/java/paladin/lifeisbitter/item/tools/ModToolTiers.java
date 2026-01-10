@@ -9,13 +9,13 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.TierSortingRegistry;
 import paladin.lifeisbitter.Lifeisbitter;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 
 import java.util.List;
 
 public class ModToolTiers {
     public static final Tier STEEL = TierSortingRegistry.registerTier(
-            new ForgeTier(2, 800, 7,-1.0f,17, Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(MaterialItems.STEEL_INGOT.get())),
+            new ForgeTier(2, 800, 7,-1.0f,17, Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(AllBasicItems.STEEL_INGOT.get())),
             ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, "steel"), List.of(Tiers.IRON), List.of()
     );
     public static final Tier NEWIRON = TierSortingRegistry.registerTier(

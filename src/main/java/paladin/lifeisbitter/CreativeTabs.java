@@ -1,6 +1,5 @@
 package paladin.lifeisbitter;
 
-import com.simibubi.create.AllCreativeModeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -8,14 +7,12 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import paladin.lifeisbitter.item.MaterialItems;
-import paladin.lifeisbitter.item.armor.ArmorItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 
 import static net.minecraft.world.item.Items.*;
-import static paladin.lifeisbitter.item.MaterialItems.*;
+import static paladin.lifeisbitter.item.AllBasicItems.*;
 import static paladin.lifeisbitter.item.armor.ArmorItems.*;
 import static paladin.lifeisbitter.item.tools.ToolItems.*;
-import static paladin.lifeisbitter.blocks.ModBlocks.*;
 
 public class CreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Lifeisbitter.MODID);
@@ -27,7 +24,7 @@ public class CreativeTabs {
     }
 
     public static final RegistryObject<CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("main_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack((MaterialItems.POLISHED_DIAMOND.get())))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack((AllBasicItems.POLISHED_DIAMOND.get())))
                     .title(Component.translatable("creativetab.main_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(STEEL_HELMET.get());

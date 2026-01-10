@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.Block;
 import paladin.lifeisbitter.Lifeisbitter;
 
 public class ModTags {
-    //public static final TagKey<Item>
 
     public static class Blocks {
         private static TagKey<Block> tag(String name){
