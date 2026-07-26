@@ -8,8 +8,8 @@
   "processingTime": 250,
   "results": [
     {
-	  "chance": 0.25,
-      "item": "lifeisbitter:sulfur_dust"
+      "item": "lifeisbitter:sulfur_dust",
+      "count": 4
     }
   ]
 }

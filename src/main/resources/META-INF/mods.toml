@@ -63,8 +63,9 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
-modId="create"
-mandatory=true
-versionRange="[6.0.0,6.1.0)"
-ordering="NONE"
-side="BOTH"
+modId = "create"
+mandatory = true
+versionRange = "${create_version_range}"
+ordering = "AFTER"
+side = "BOTH"
+

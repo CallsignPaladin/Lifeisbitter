@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import paladin.lifeisbitter.Lifeisbitter;
 import paladin.lifeisbitter.blocks.ModBlocks;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.tools.ToolItems;
 
 public class ModFluids {
@@ -30,12 +30,12 @@ public class ModFluids {
     public static final ForgeFlowingFluid.Properties URINE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.URINE_FLUID_TYPE, SOURCE_URINE, FLOWING_URINE)
             .slopeFindDistance(8).levelDecreasePerBlock(1).block(ModBlocks.URINE_BLOCK)
-            .bucket(ToolItems.URINE_BUCKET);
+            .bucket(AllBasicItems.URINE_BUCKET);
 
     public static final ForgeFlowingFluid.Properties ROCKET_FUEL_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.ROCKET_FUEL_FLUID_TYPE, SOURCE_ROCKET_FUEL, FLOWING_ROCKET_FUEL)
             .slopeFindDistance(8).levelDecreasePerBlock(1).block(ModBlocks.ROCKET_FUEL_BLOCK)
-            .bucket(ToolItems.ROCKET_FUEL_BUCKET);
+            .bucket(AllBasicItems.ROCKET_FUEL_BUCKET);
 
 
     public static void register(IEventBus eventBus) {

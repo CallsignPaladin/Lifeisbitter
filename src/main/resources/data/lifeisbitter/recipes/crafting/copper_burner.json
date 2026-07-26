@@ -2,17 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "tag": "forge:netherrack"
+    "N": {
+      "item": "minecraft:campfire"
     },
     "I": {
       "tag": "forge:plates/copper"
+    },
+	"P": {
+      "item": "create:propeller"
+    },
+	"F": {
+      "item": "create:fluid_pipe"
     }
   },
   "pattern": [
-    " I ",
-    "IAI",
-    " I "
+    "IFI",
+    "IPI",
+    "INI"
   ],
   "result": {
     "item": "lifeisbitter:copper_burner"

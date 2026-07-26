@@ -12,13 +12,13 @@ import org.joml.Vector3f;
 import paladin.lifeisbitter.Lifeisbitter;
 
 public class ModFluidTypes {
-    public static final ResourceLocation URINE_STILL_RL = new ResourceLocation(Lifeisbitter.MODID,"block/urine_still");
-    public static final ResourceLocation URINE_FLOWING_RL = new ResourceLocation(Lifeisbitter.MODID,"block/urine_flow");
-    public static final ResourceLocation URINE_OVERLAY_RL = new ResourceLocation(Lifeisbitter.MODID,"block/water_overlay");
+    public static final ResourceLocation URINE_STILL_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/urine_still");
+    public static final ResourceLocation URINE_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/urine_flow");
+    public static final ResourceLocation URINE_OVERLAY_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/water_overlay");
 
-    public static final ResourceLocation ROCKET_FUEL_STILL_RL = new ResourceLocation(Lifeisbitter.MODID,"block/rocket_fuel_still");
-    public static final ResourceLocation ROCKET_FUEL_FLOWING_RL = new ResourceLocation(Lifeisbitter.MODID,"block/rocket_fuel_flow");
-    public static final ResourceLocation ROCKET_FUEL_OVERLAY_RL = new ResourceLocation(Lifeisbitter.MODID,"block/water_overlay");
+    public static final ResourceLocation ROCKET_FUEL_STILL_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/rocket_fuel_still");
+    public static final ResourceLocation ROCKET_FUEL_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/rocket_fuel_flow");
+    public static final ResourceLocation ROCKET_FUEL_OVERLAY_RL = ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID,"block/water_overlay");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Lifeisbitter.MODID);

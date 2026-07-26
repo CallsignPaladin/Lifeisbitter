@@ -1,6 +1,9 @@
 package paladin.lifeisbitter;
 
 import com.mojang.logging.LogUtils;
+import com.tterrag.registrate.Registrate;
+import net.createmod.ponder.foundation.PonderIndex;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,7 +13,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.IExtensionPoint;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -19,11 +21,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import paladin.lifeisbitter.blocks.ModBlocks;
 import paladin.lifeisbitter.crafting.ModRecipes;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 import paladin.lifeisbitter.item.armor.ArmorItems;
 import paladin.lifeisbitter.item.fluid.ModFluidTypes;
 import paladin.lifeisbitter.item.fluid.ModFluids;
 import paladin.lifeisbitter.item.tools.ToolItems;
+import paladin.lifeisbitter.ponder.ModPonderPlugin;
+import paladin.lifeisbitter.screens.ModMenuTypes;
+import paladin.lifeisbitter.screens.TallBlastFurnaceScreen;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Lifeisbitter.MODID)
@@ -34,21 +39,24 @@ public class Lifeisbitter {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final String shortVersion = "1.0.3";
+    public static final String shortVersion = "1.2.0.0";
 
-    public Lifeisbitter() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static final Registrate REGISTRATE = Registrate.create(MODID);
 
+    public Lifeisbitter(FMLJavaModLoadingContext fmlJavaModLoadingContext) {
+        IEventBus modEventBus = fmlJavaModLoadingContext.getModEventBus();//FMLJavaModLoadingContext.get().getModEventBus();
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         ArmorItems.ITEMS.register(modEventBus);
         ArmorItems.VANILLA_ITEMS.register(modEventBus);
-        MaterialItems.ITEMS.register(modEventBus);
+        AllBasicItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlocks.BLOCK_ENTITIES.register(modEventBus);
         ToolItems.ITEMS.register(modEventBus);
         ToolItems.VANILLA_ITEMS.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
 
@@ -65,9 +73,9 @@ public class Lifeisbitter {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "lifeisbitter-server.toml");
+        fmlJavaModLoadingContext.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "lifeisbitter-server.toml");
 
-        ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class,
+        fmlJavaModLoadingContext.registerExtensionPoint(IExtensionPoint.DisplayTest.class,
                 () -> new IExtensionPoint.DisplayTest(
                         () -> shortVersion + ".x",
                         (remoteVersionString, isServer) -> {return remoteVersionString.startsWith(shortVersion);}
@@ -100,7 +108,10 @@ public class Lifeisbitter {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_URINE.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_ROCKET_FUEL.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_ROCKET_FUEL.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_BURNER.get(), RenderType.cutout());
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_BURNER.get(), RenderType.cutout());
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.TALL_BLAST_FURNACE.get(), RenderType.translucent());
+            MenuScreens.register(ModMenuTypes.TALL_BLAST_FURNACE_MENU.get(), TallBlastFurnaceScreen::new);
+            PonderIndex.addPlugin(new ModPonderPlugin());
         }
     }
 }

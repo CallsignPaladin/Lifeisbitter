@@ -14,7 +14,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "lifeisbitter:steel_sheet"
+          "item": "lifeisbitter:incomplete_diamondsteel_sheet"
         },
         {
           "item": "lifeisbitter:diamond_dust"
@@ -22,7 +22,7 @@
       ],
       "results": [
         {
-          "item": "lifeisbitter:steel_sheet"
+          "item": "lifeisbitter:incomplete_diamondsteel_sheet"
         }
       ]
     },
@@ -30,17 +30,17 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "lifeisbitter:steel_sheet"
+          "item": "lifeisbitter:incomplete_diamondsteel_sheet"
         }
       ],
       "results": [
         {
-          "item": "lifeisbitter:steel_sheet"
+          "item": "lifeisbitter:incomplete_diamondsteel_sheet"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "lifeisbitter:steel_sheet"
+    "item": "lifeisbitter:incomplete_diamondsteel_sheet"
   }
 }

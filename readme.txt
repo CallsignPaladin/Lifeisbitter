@@ -13,4 +13,3 @@ Side - client or server only changes
 
 Thanks to that you don't need to always have the same version to connect to server, 
 both server and client just need to share first three (X.X.X) nubmers of version.
-Also, not all versions are uploaded to github, only Patch and higher (X.X.X)

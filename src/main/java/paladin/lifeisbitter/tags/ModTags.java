@@ -9,17 +9,16 @@ import net.minecraft.world.level.block.Block;
 import paladin.lifeisbitter.Lifeisbitter;
 
 public class ModTags {
-    //public static final TagKey<Item>
 
     public static class Blocks {
         private static TagKey<Block> tag(String name){
-            return BlockTags.create(new ResourceLocation(Lifeisbitter.MODID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, name));
         }
     }
 
     public static class Items {
         private static TagKey<Item> tag(String name){
-            return ItemTags.create(new ResourceLocation(Lifeisbitter.MODID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Lifeisbitter.MODID, name));
         }
     }
 }

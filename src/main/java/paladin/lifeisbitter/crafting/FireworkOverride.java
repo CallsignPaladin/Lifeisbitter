@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import paladin.lifeisbitter.item.MaterialItems;
+import paladin.lifeisbitter.item.AllBasicItems;
 
 import static paladin.lifeisbitter.Config.requireSolidFuelForRocket;
 import static paladin.lifeisbitter.Config.requireSolidFuelForRocketAlways;
@@ -18,7 +18,7 @@ import static paladin.lifeisbitter.Config.requireSolidFuelForRocketAlways;
 public class FireworkOverride extends FireworkRocketRecipe {
     private static final Ingredient CARDBOARD_INGREDIENT = Ingredient.of(AllItems.CARDBOARD);
     private static final Ingredient GUNPOWDER_INGREDIENT = Ingredient.of(Items.GUNPOWDER);
-    private static final Ingredient SOLID_FUEL_INGREDIENT = Ingredient.of(MaterialItems.SOLID_FUEL.get());
+    private static final Ingredient SOLID_FUEL_INGREDIENT = Ingredient.of(AllBasicItems.SOLID_FUEL.get());
     private static final Ingredient STAR_INGREDIENT = Ingredient.of(Items.FIREWORK_STAR);
     private static final int maxFlightCount = 5;
 

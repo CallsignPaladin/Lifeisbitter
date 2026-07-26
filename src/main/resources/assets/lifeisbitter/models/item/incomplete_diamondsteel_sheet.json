@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lifeisbitter:item/incomplete_diamondsteel_sheet"
+  }
+}
