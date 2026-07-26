@@ -52,6 +52,7 @@ public class CreativeTabs {
                         output.accept(TALL_BLAST_FURNACE_ITEM.get());
                         output.accept(USED_FILTER.get());
                         output.accept(COKE.get());
+                        output.accept(INFESTED_PULP.get());
                     })
                     .build()
             );

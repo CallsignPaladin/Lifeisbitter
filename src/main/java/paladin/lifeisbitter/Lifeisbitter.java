@@ -39,7 +39,7 @@ public class Lifeisbitter {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final String shortVersion = "1.1.0.0";
+    public static final String shortVersion = "1.2.0.0";
 
     public static final Registrate REGISTRATE = Registrate.create(MODID);
 

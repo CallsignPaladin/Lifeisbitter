@@ -11,6 +11,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 // Demonstrates how to use Forge's config APIs
 @Mod.EventBusSubscriber(modid = Lifeisbitter.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config {
+
+    static String mps = "[in Blocks/Second]";
+    static String acc = "[in Blocks/Second²]";
+
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     private static final ForgeConfigSpec.BooleanValue REQUIRE_SOLID_FUEL_FOR_ROCKET = BUILDER
@@ -20,6 +24,20 @@ public class Config {
     private static final ForgeConfigSpec.BooleanValue REQUIRE_SOLID_FUEL_FOR_ROCKET_ALWAYS = BUILDER
             .comment("Require solid fuel to craft all types of fireworks?")
             .define("requireSolidFuelForRocketAlways", false);
+
+    private static final ForgeConfigSpec.DoubleValue ROCKET_FUELED_TRAIN_TOP_SPEED = BUILDER
+            .comment(mps,"The top speed of rocket fueled Trains.")
+            .defineInRange("rocketFueledTrainTopSpeed", 64, 0, Float.MAX_VALUE);
+
+
+    private static final ForgeConfigSpec.DoubleValue ROCKET_FUELED_TRAIN_TOP_TURNING_SPEED = BUILDER
+            .comment(mps,"The top speed of rocket fueled Trains during a turn.")
+            .defineInRange("rocketFueledTrainTopTurningSpeed", 32, 0, Float.MAX_VALUE);
+
+
+    private static final ForgeConfigSpec.DoubleValue ROCKET_FUELED_TRAIN_ACCELERATION = BUILDER
+            .comment(acc,"The acceleration of rocket fueled Trains.")
+            .defineInRange("rocketFueledTrainAcceleration", 5, 0, Float.MAX_VALUE);
 
     /**private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
             .comment("Whether to log the dirt block on common setup")
@@ -42,6 +60,9 @@ public class Config {
 
     public static boolean requireSolidFuelForRocket;
     public static boolean requireSolidFuelForRocketAlways;
+    public static float rocketFueledTrainTopSpeed;
+    public static float rocketFueledTrainTopTurningSpeed;
+    public static float rocketFueledTrainAcceleration;
 
     /**
     private static boolean validateItemName(final Object obj) {
@@ -53,6 +74,9 @@ public class Config {
     static void onLoad(final ModConfigEvent event) {
         requireSolidFuelForRocket = REQUIRE_SOLID_FUEL_FOR_ROCKET.get();
         requireSolidFuelForRocketAlways = REQUIRE_SOLID_FUEL_FOR_ROCKET_ALWAYS.get();
+        rocketFueledTrainTopSpeed = ROCKET_FUELED_TRAIN_TOP_SPEED.get().floatValue();
+        rocketFueledTrainTopTurningSpeed = ROCKET_FUELED_TRAIN_TOP_TURNING_SPEED.get().floatValue();
+        rocketFueledTrainAcceleration = ROCKET_FUELED_TRAIN_ACCELERATION.get().floatValue();
 
         /**
         // convert the list of strings into a set of items

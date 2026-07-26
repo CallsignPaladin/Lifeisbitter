@@ -1,13 +1,22 @@
 {
-  "type": "create:haunting",
+  "type": "create:mixing",
   "ingredients": [
     {
-      "item": "minecraft:coarse_dirt"
+      "item": "lifeisbitter:infested_pulp"
+    },
+    {
+      "fluid": "minecraft:lava",
+      "amount": 25
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 250
     }
   ],
   "results": [
     {
-      "item": "minecraft:infested_stone"
+      "item": "minecraft:infested_stone",
+      "count": 8
     }
   ]
 }

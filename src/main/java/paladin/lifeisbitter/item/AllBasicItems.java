@@ -59,6 +59,9 @@ public class AllBasicItems {
     public static final RegistryObject<Item> USED_FILTER = ITEMS.register("used_filter",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> INFESTED_PULP = ITEMS.register("infested_pulp",
+            () -> new Item(new Item.Properties()));
+
 
     // FLUID STORAGE
     public static ItemEntry<BucketItem> URINE_BUCKET = Lifeisbitter.REGISTRATE.item("urine_bucket",
