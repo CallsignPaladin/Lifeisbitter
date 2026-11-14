@@ -1,0 +1,15 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_rod"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:blaze_powder",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

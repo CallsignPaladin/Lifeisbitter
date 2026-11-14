@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lifeisbitter:steel_block"
+    }
+  ],
+  "result": {
+    "id": "lifeisbitter:steel_ingot",
+    "count": 9
+  }
+}

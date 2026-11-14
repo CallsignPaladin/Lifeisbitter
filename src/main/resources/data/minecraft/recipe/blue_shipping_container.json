@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdeco"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "C": {
+      "item": "minecraft:blue_dye"
+    },
+    "S": {
+      "item": "lifeisbitter:steel_sheet"
+    }
+  },
+  "pattern": [
+    "CS",
+    "SB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createdeco:blue_shipping_container"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+        "type": "neoforge:mod_loaded",
+        "modid": "createestrogen"
+    }
+  ],
+  "type": "create:mixing",
+  "heatRequirement": "none",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "lifeisbitter:urine"
+    },
+    {
+      "item": "create:filter"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "createestrogen:used_filter"
+    },
+    {
+      "count": 1,
+      "id": "lifeisbitter:nitre"
+    }
+  ]
+}

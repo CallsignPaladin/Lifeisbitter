@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "lifeisbitter:sulfur_dust",
+    {
+      "id": "betterend:crystalline_sulphur",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sulfur_dust",
+      "required": false
+    },
+    {
+      "id": "galosphere:pink_salt_shard",
+      "required": false
+    }
+  ]
+}

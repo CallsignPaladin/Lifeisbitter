@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:campfire"
+    },
+    "I": {
+      "tag": "c:plates/copper"
+    },
+	"P": {
+      "item": "create:propeller"
+    },
+	"F": {
+      "item": "create:fluid_pipe"
+    }
+  },
+  "pattern": [
+    "IFI",
+    "IPI",
+    "INI"
+  ],
+  "result": {
+    "id": "lifeisbitter:copper_burner"
+  },
+  "show_notification": true
+}

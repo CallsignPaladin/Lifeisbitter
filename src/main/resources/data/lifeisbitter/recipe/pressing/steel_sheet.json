@@ -1,0 +1,14 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "lifeisbitter:steel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "id": "lifeisbitter:steel_sheet",
+	  "count": 1
+    }
+  ]
+}

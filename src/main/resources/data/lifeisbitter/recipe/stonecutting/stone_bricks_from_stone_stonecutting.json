@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:infested_stone"
+  },
+  "result": {
+    "id": "minecraft:infested_stone_bricks",
+    "count": 1
+  }
+}

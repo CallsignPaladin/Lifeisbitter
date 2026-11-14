@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "paladin.lifeisbitter.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "lifeisbitter.refmap.json",
+  "mixins": [
+    "FireworkRocketRecipeMixin",
+    "ItemsMixin",
+    "TrainMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "multipart": [{
+      "apply": {
+        "model": "lifeisbitter:block/copper_burner"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"blaze": "kindled"},
+          {"blaze": "seething"},
+          {"blaze": "fading"}
+        ]
+      },
+      "apply": {
+        "model": "lifeisbitter:block/copper_burner_burning"
+      }
+    }
+  ]
+}

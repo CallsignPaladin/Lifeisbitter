@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "s s",
+    "s s"
+  ],
+  "key": {
+    "s": {
+      "item": "lifeisbitter:diamondsteel_sheet"
+    }
+  },
+  "result": {
+    "id": "minecraft:diamond_leggings",
+    "count": 1
+  }
+}

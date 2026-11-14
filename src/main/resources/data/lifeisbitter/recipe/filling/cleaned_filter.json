@@ -1,0 +1,19 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "lifeisbitter:used_filter"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "minecraft:water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "id": "create:filter"
+    }
+  ]
+}

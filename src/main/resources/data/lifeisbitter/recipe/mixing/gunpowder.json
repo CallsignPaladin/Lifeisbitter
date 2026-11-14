@@ -1,0 +1,37 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+	[
+      { "tag": "c:sulfur_dust" },
+      { "tag": "c:dusts/sulfur_dust" }
+    ],
+    {
+      "tag": "c:nitre"
+    },
+	{
+      "tag": "c:nitre"
+    },
+	{
+      "tag": "c:nitre"
+    },
+	{
+      "tag": "c:nitre"
+    },
+	{
+      "tag": "c:nitre"
+    },
+	{
+      "tag": "c:nitre"
+    },
+    {
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "results": [
+    {
+      "count": 5,
+      "id": "minecraft:gunpowder"
+    }
+  ]
+}

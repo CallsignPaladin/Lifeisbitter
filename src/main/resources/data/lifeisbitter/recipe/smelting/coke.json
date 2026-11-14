@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1000,
+  "experience": 0.15,
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": {
+    "id": "lifeisbitter:coke"
+  }
+}

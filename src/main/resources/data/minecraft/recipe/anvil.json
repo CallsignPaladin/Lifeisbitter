@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bbb",
+    " i ",
+    "iii"
+  ],
+  "key": {
+    "b": {
+      "item": "lifeisbitter:steel_block"
+    },
+    "i": {
+      "item": "lifeisbitter:steel_ingot"
+    }
+  },
+  "result": {
+    "id": "minecraft:anvil",
+    "count": 1
+  },
+  "show_notification": true
+}

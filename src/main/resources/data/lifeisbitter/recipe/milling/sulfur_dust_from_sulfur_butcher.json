@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "butcher"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "butcher:sulfur"
+    }
+  ],
+  "results": [
+    {
+      "id": "lifeisbitter:sulfur_dust",
+      "count": 6
+    },
+    {
+      "id": "lifeisbitter:sulfur_dust",
+      "count": 4,
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 250
+}

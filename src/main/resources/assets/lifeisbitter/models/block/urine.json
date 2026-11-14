@@ -1,0 +1,8 @@
+{
+    "textures": {
+        "particle": "lifeisbitter:block/urine_still",
+		"still": "lifeisbitter:block/urine_still",
+		"flow": "lifeisbitter:block/urine_flow"
+    }
+}
+

@@ -1,0 +1,13 @@
+{
+  "type": "create:haunting",
+  "ingredients": [
+    {
+      "item": "create:pulp"
+    }
+  ],
+  "results": [
+    {
+      "id": "lifeisbitter:infested_pulp"
+    }
+  ]
+}

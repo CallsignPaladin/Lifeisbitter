@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "lifeisbitter:steel_sheet"
+    },
+    "C": {
+      "tag": "c:barrels"
+    }
+  },
+  "pattern": [
+    "B",
+    "C",
+    "B"
+  ],
+  "result": {
+    "id": "create:item_vault"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "lifeisbitter:rocket_fuel"
+    }
+  ],
+  "results": [
+    {
+      "id": "lifeisbitter:solid_fuel"
+    }
+  ]
+}
