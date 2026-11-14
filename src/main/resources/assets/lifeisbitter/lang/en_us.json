@@ -24,7 +24,7 @@
   "block.lifeisbitter.copper_burner": "Copper Burner",
   "block.lifeisbitter.copper_burner.tooltip.summary": "A copper version of the Blaze Burner. Can't be used to drive a piston or super burn. Use coke to fuel it",
   "block.lifeisbitter.tall_blast_furnace": "Tall Blast Furnace",
-  "item.lifeisbitter.solid_fuel": "Solid Fuel",
+  "item.lifeisbitter.solid_fuel": "Solid Rocket Fuel",
   "item.lifeisbitter.used_filter": "Used Filter",
   "item.lifeisbitter.coke": "Coke",
   "item.lifeisbitter.coke.tooltip.summary": "Made in furnace from coal. Insert it into copper burner to heat it up",
