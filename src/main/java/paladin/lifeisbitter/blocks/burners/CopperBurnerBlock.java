@@ -18,11 +18,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import org.jetbrains.annotations.NotNull;
+import paladin.lifeisbitter.blocks.ModBlocks;
 
 import javax.annotation.Nullable;
 
@@ -137,5 +140,10 @@ public class CopperBurnerBlock extends BlazeBurnerBlock {
             case NONE, SMOULDERING -> 0;
             default -> 8;
         };
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+        return new ItemStack(ModBlocks.COPPER_BURNER);
     }
 }
