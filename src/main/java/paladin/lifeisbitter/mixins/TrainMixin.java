@@ -8,6 +8,7 @@ import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -21,13 +22,12 @@ import java.util.List;
 public class TrainMixin {
     @Shadow public List<Carriage> carriages;
     @Shadow public double speed;
-    public int turboFuelTicks = 0;
+    @Unique public int turboFuelTicks = 0;
 
     @Inject(method = "burnFuel", at = @At("HEAD"), cancellable = true) //TO DO - add remap
     public void burnFuel(CallbackInfo ci) {
         if(turboFuelTicks > 0) {
             turboFuelTicks--;
-            System.out.println("turbo fuel ticks: " + turboFuelTicks);
             ci.cancel();
         }else {
             boolean iterateFromBack = this.speed < (double)0.0F;
@@ -40,7 +40,7 @@ public class TrainMixin {
                 if (fuelItems != null) {
                     for(int slot = 0; slot < fuelItems.getSlots(); ++slot) {
                         ItemStack stack = fuelItems.extractItem(slot, 1, true);
-                        if(stack.getItem() == AllBasicItems.URINE_BUCKET.get()){ //TO DO: change to rocketfuel
+                        if(stack.getItem() == AllBasicItems.ROCKET_FUEL_BUCKET.get()){
                             int rocketFuelBurnTime = 1000;
                             turboFuelTicks += rocketFuelBurnTime;
                             fuelItems.extractItem(slot, 1, false);
@@ -48,8 +48,6 @@ public class TrainMixin {
                             if (!containerItem.isEmpty()) {
                                 ItemHandlerHelper.insertItemStacked(fuelItems, containerItem, false);
                             }
-
-                            System.out.println("rocket fuel active!!! yay ");
 
                             return;
                         }
